@@ -1,0 +1,406 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main-header {
+    text-align: center;
+    width: 70%;
+    font-size: 30pt;
+    font-weight: 500;
+    color: white;
+}
+
+.main-subheader {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+}
+
+.switch-button {
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 70px;
+    height: 90px;
+    background-color: white;
+    border: none;
+    font-size: 24pt;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+}
+
+.switch-button:hover {
+    background-color: rgb(18, 96, 173);
+}
+
+#next {
+    right: 0;
+}
+
+#prev {
+    left: 0;
+}
+
+.schema {
+    height: 800px;
+    width: 1000px;
+    background: black;
+    position: absolute;
+}
+
+.main_branch {
+    top: 143px;
+    left: 223px;
+    width: 1px;
+    height: 495px;
+    transform: rotate(45deg);
+    position: relative;
+    background: red;  
+    animation: drawMainBranch 2s linear forwards,
+                backgroundSignalM 2s linear 6s infinite;
+    transform-origin: bottom left;
+}
+
+.first_branch {
+    width: 275px;
+    height: 1px;
+    background: red;  
+    position: relative;   
+    transform: scale(0);
+}
+
+.first_branch:nth-child(2) {
+    top: -70px;
+    left: 437px;
+    transform-origin: left bottom;
+    animation: drawFirstBranch 2s linear 1.3s forwards,
+               backgroundSignal 2s linear 7s infinite; 
+}
+
+.first_branch:nth-child(3) {
+    top: -71px;
+    left: 160px;
+    transform-origin: right bottom;
+    animation: drawFirstBranch 2s linear 1.3s forwards, 
+               backgroundSignalL 2s linear 7s infinite; 
+}
+
+.first_branch:nth-child(4) {
+    top: -209px;
+    left: 574px;
+    transform-origin: left bottom;
+    animation: drawFirstBranch 2s linear 2s forwards,
+               backgroundSignal 2s linear 7s infinite; 
+}
+
+.first_branch:nth-child(5) {
+    top: -210px;
+    left: 298px;
+    transform-origin: right bottom;
+    animation: drawFirstBranch 2s linear 2s forwards,
+               backgroundSignalL 2s linear 7s infinite;
+}
+
+.second_branch {
+    width: 1px;
+    height: 80px;
+    background: red;  
+    position: relative;   
+    transform: scale(0);
+    transform-origin: left bottom; 
+}
+
+.second_branch:nth-child(6) {
+    left: 159px;
+    top: -153px;
+    animation: drawFirstBranch 2s linear 3.3s forwards; 
+}
+
+.second_branch:nth-child(7) {
+    left: 435px;
+    top: -233px;
+    animation: drawFirstBranch 2s linear 3.3s forwards; 
+}
+
+.second_branch:nth-child(8) {
+    left: 712px;
+    top: -313px;
+    animation: drawFirstBranch 2s linear 3.3s forwards; 
+}
+
+.second_branch:nth-child(9) {
+    left: 298px;
+    top: -531px;
+    animation: drawFirstBranch 2s linear 4s forwards; 
+}
+
+.second_branch:nth-child(10) {
+    left: 573px;
+    top: -611px;
+    animation: drawFirstBranch 2s linear 4s forwards; 
+}
+
+.second_branch:nth-child(11) {
+    left: 848px;
+    top: -691px;
+    animation: drawFirstBranch 2s linear 4s forwards; 
+}
+
+.desk {
+    position: absolute;
+    width: 173px;
+    height: 73px;
+    border: 1px black solid;
+    background: white;
+    transform: skew(-45deg) scale(0);
+    transform-origin: center; 
+    text-align: center;
+}
+
+.desk:nth-child(12) {
+    left: 73px;
+    top: 308px;
+    animation: drawDesk 2s linear 5.3s forwards; 
+}
+
+.desk:nth-child(13) {
+    left: 349px;
+    top: 308px;
+    animation: drawDesk 2s linear 5.3s forwards; 
+}
+
+.desk:nth-child(14) {
+    left: 626px;
+    top: 308px;
+    animation: drawDesk 2s linear 5.3s forwards; 
+}
+
+.desk:nth-child(15) {
+    left: 212px;
+    top: 170px;
+    animation: drawDesk 2s linear 6s forwards; 
+}
+
+.desk:nth-child(16) {
+    left: 487px;
+    top: 170px;
+    animation: drawDesk 2s linear 6s forwards; 
+}
+
+.desk:nth-child(17) {
+    left: 762px;
+    top: 170px;
+    animation: drawDesk 2s linear 6s forwards; 
+}
+
+.admin {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    background: white;
+    top: -441px;
+    left: 72px;
+    transform: scale(0);
+    animation: drawFirstBranch 2s linear 6s forwards;
+}
+
+.label {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    position: absolute;
+}
+
+.label-text {
+    width: 0;
+    color: white;
+    font-family: monospace;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: printText 4s steps(8) 8s forwards;
+}
+
+.label:nth-child(19) {
+    left: 30px;
+    top: 260px;
+}
+
+.label:nth-child(20) {
+    left: 315px;
+    top: 260px;
+}
+
+.label:nth-child(21) {
+    left: 595px;
+    top: 260px;
+}
+
+.label:nth-child(22) {
+    left: 175px;
+    top: 120px;
+}
+
+.label:nth-child(23) {
+    left: 455px;
+    top: 120px;
+}
+
+.label:nth-child(24) {
+    left: 730px;
+    top: 120px;
+}
+
+.label:nth-child(25) {
+    left: 70px;
+    top: 495px;
+}
+
+.card {
+    border: 1px solid black;
+    height: 70px;
+    width: 50px;
+    background-color: white;
+    position: absolute;
+}
+
+.state {
+    height: 10px;
+    width: 50px;
+    bottom: 0px;
+    background-color: chartreuse;
+    position: absolute;
+}
+
+.card:nth-child(1) {
+    left: 5px;
+    top: 5px;
+}
+
+.card:nth-child(2) {
+    left: 60px;
+    top: 5px;
+}
+
+.card:nth-child(3) {
+    left: 115px;
+    top: 5px;
+}
+
+.card:nth-child(4) {
+    left: 5px;
+    top: 80px;
+}
+
+.card:nth-child(5) {
+    left: 60px;
+    top: 80px;
+}
+
+.card:nth-child(6) {
+    left: 115px;
+    top: 80px;
+}
+
+.log {
+    border: 1px solid black;
+    height: 70px;
+    width: 115px;
+    left: 170px;
+    bottom: 5px;
+    font-size: 5px;
+    padding: 5px;
+    background-color: white;
+    position: absolute;
+}
+
+@keyframes drawMainBranch {
+    0% {
+      transform: scale(0) rotate(45deg);
+    }
+    100% {
+      transform: scale(1) rotate(45deg);
+    }
+}
+
+@keyframes drawFirstBranch {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes drawDesk {
+    0% {
+      transform: skew(-45deg) scale(0);
+    }
+    100% {
+      transform: skew(-45deg) scale(1);
+    }
+}
+
+@keyframes backgroundSignalM {
+    0% {
+        background-image: radial-gradient(circle at 100%, black 10%, red 90%);
+        background-position-y: 0px;
+    }
+    50% {
+        background-position-y: 495px;
+    }
+    100% {
+        background-image: radial-gradient(circle at 100%, black 10%, red 90%);
+        background-position-y: 0px;
+    }
+}
+
+@keyframes backgroundSignal {
+    0% {
+        background-image: linear-gradient(to left, red 80%, black 20%);
+        background-position: 0px;
+    }
+    50% {
+        background-position: 275px;
+    }
+    100% {
+        background-image: linear-gradient(to left, red 80%, black 20%);
+        background-position: 0px;
+    }
+}
+
+@keyframes backgroundSignalL {
+    0% {
+        background-image: linear-gradient(to right, red 80%, black 20%);
+        background-position: 0px;
+    }
+    50% {
+        background-position: -275px;
+    }
+    100% {
+        background-image: linear-gradient(to right, red 80%, black 20%);
+        background-position: 0px;
+    }
+}
+
+@keyframes printText {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 8ch;
+    }
+}

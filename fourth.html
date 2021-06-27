@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_ex.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowLeft") document.location.href = "third.html";  
+        if (event.key === "ArrowRight") document.location.href = "fifth.html";         
+    }); </script>
+    <title>Транспортировка заданий</title>
+</head>
+<body>
+    <div class="page_num">5</div>
+    <h1 class="header">
+        &emsp;&emsp;Транспортировка заданий
+    </h1>
+    <div class="general">
+        <ul class="list">
+            <li class="item">Хранение в базе данных (JSON)</li>
+            <li class="item">Передача по сети (JSON)</li>
+            <li class="item">Изменение/решение задачи (C++)</li>
+            <li class="item">Чтение/проверка (C++)</li>
+        </ul>
+        <img class="image_v2" src="image_4.jpg">
+    </div>
+    <a href="third.html" class="lbtn"><<</a>
+    <a href="fifth.html" class="rbtn">>></a>
+</body>
+</html>

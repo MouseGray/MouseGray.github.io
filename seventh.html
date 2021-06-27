@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_ex.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowLeft") document.location.href = "sixth.html";  
+        if (event.key === "ArrowRight") document.location.href = "eighth.html";         
+    }); </script>
+    <title>Отрисовка объектов</title>
+</head>
+<body>
+    <div class="page_num">8</div>
+    <h1 class="header">
+        &emsp;&emsp;Отрисовка объектов
+    </h1>
+    <div class="general_v2">
+        <img class="image" src="image_7.jpg">
+        <div class="summary">
+            Схема ‘модель - объект’
+        </div>
+    </div>
+    <a href="sixth.html" class="lbtn"><<</a>
+    <a href="eighth.html" class="rbtn">>></a>
+</body>
+</html>

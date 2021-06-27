@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_ex.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowLeft") document.location.href = "second.html";  
+        if (event.key === "ArrowRight") document.location.href = "fourth.html";         
+    }); </script>
+    <title>Язык образов</title>
+</head>
+<body>
+    <div class="page_num">4</div>
+    <h1 class="header">
+        &emsp;&emsp;Язык образов
+    </h1>
+    <div class="general_v2">
+        <img class="image" src="image_3.jpg">
+        <div class="summary">
+            Эволюция языка
+        </div>
+    </div>
+    <a href="second.html" class="lbtn"><<</a>
+    <a href="fourth.html" class="rbtn">>></a>
+</body>
+</html>
